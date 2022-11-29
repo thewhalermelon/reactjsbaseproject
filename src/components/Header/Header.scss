@@ -1,3 +1,18 @@
+@import '../../assets/styles/app.scss';
+
 .header {
-  background-color: lightblue;
+  background-color: $dark-dimmer;
+  padding: 10px 20px;
+
+  &__left {
+    @include flex-box(center, start);
+
+    img {
+      width: 40px;
+    }
+
+    span {
+      display: none;
+    }
+  }
 }

@@ -4,10 +4,10 @@ import myavatar from '../../assets/images/myavatar.jpg';
 
 const Header = () => {
   return (
-    <div className='header container--padding'>
+    <div className='header'>
       <div className='header__left'>
         <img src={myavatar} alt='my-avatar' />
-        <h3>TheWhalerMelon</h3>
+        <span>TheWhalerMelon</span>
       </div>
       <div className='header__right'></div>
     </div>

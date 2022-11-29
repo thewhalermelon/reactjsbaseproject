@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Header />
-      <div className='main-container'>
+      <div className='container'>
         <Router>
           <Routes>
             <Route path='/' element={<InitialPage />} />
