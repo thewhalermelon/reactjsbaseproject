@@ -5,20 +5,23 @@ import { Link } from 'react-router-dom';
 const InitialPage = () => {
   return (
     <div className='App'>
-      <header className='App-header'>
+      <div>
         <img src={logo} className='App-logo' alt='logo' />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a className='App-link' href='https://reactjs.org' target='_blank' rel='noopener noreferrer'>
-          Learn React
-        </a>
         <ul>
+          <li href='https://reactjs.org' target='_blank'>
+            React Homepage
+          </li>
           <li>
             <Link to='/my-profile'>My Profile</Link>
           </li>
+          <li>
+            <Link to='/tips'>Tips</Link>
+          </li>
         </ul>
-      </header>
+      </div>
     </div>
   );
 };
