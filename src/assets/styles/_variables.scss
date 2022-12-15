@@ -1,15 +1,23 @@
-$primary: #efefef;
-$secondary: #2f2f2f;
-$tertiary: #026190;
+$white: #FFF;
+$black: #111;
+$yellow: #FFFF00;
+$moon: #c7c7c7;
 
-$gray-lighter: #F5F5F5;
+$primary: #EFEFEF;
+$secondary: #2F2F2F;
+
+$gray-light: #F5F5F5;
 $gray: $primary;
 $gray-dimmer: #CDAEB1;
 
-$dark-lighter: #828282;
+$dark-light: #828282;
 $dark: $secondary;
 $dark-dimmer: #282222;
 
-$tertiary-lighter: #3197BC;
+$tertiary-lightest: #93E6F3;
+$tertiary-lighter: #5AC3DD;
+$tertiary-light: #3197BC;
 $tertiary: #026190;
 $tertiary-dimmer: #014B7B;
+
+$letter-spacing: 1px;

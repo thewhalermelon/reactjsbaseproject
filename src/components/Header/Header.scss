@@ -2,10 +2,12 @@
 
 .header {
   background-color: $dark-dimmer;
-  padding: 10px 20px;
+  padding: 12px 24px;
+  
+  @include flex-box(center, space-between);
 
   &__left {
-    @include flex-box(center, start);
+    @include flex-box(center, flex-start);
 
     img {
       border-radius: 50%;
@@ -15,5 +17,9 @@
     span {
       display: none;
     }
+  }
+
+  &__right {
+    height: 40px;
   }
 }

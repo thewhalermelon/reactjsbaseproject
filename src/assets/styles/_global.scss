@@ -1,16 +1,93 @@
 @import '../../assets/styles/variables';
+@import './mixins';
 
 body {
-  background-color: $dark;
   box-sizing: border-box;
-  color: $tertiary-lighter;
   font-family: 'Heebo';
-  letter-spacing: 1px;
+  font-size: 1rem;
+  line-height: 2;
+  letter-spacing: $letter-spacing;
   margin: 0;
-  min-height: 100vh;
 }
 
 .container {
-  height: calc(100vh - 60px);
-  padding: 0 20px;
+  background-color: $dark;
+  color: $tertiary-light;
+  height: calc(100vh);
+  padding: 16px 24px 0;
+  position: relative;
+
+  .navigation-buttons {
+    position: sticky;
+    top: 16px;
+    margin-left: auto;
+    width: fit-content;
+  }
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  color: $tertiary-lighter;
+  font-size: 1rem;
+  transition: 0.3s ease;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.primary-btn {
+  background-color: $dark;
+  border: 2px solid $tertiary-lighter;
+  border-radius: 8px;
+  margin: 6px 0 0 12px;
+  min-width: 90px;
+  padding: 8px 0;
+  
+  &:hover {
+    border-color: $tertiary-lightest;
+    color: $tertiary-lightest;
+    font-weight: 600;
+    transform: translate(-2px, -2px);
+    box-shadow: 1px 9px 17px 5px rgba(147, 230, 243, 0.16);
+  }
+}
+
+.toggle-btn {
+  border: 2px solid $tertiary-light;
+  border-radius: 20px;
+  display: block;
+  height: 100%;
+  padding: 0 8px;
+  position: relative;
+  width: 80px;
+    
+  @include flex-box(center, space-between);
+
+  &:before {
+    content: '';
+    background-color: $tertiary-lightest;
+    border-radius: 50%;
+    height: 28px;
+    left: 5px;
+    position: absolute;
+    top: 4px;
+    transition: 0.5s ease;
+    width: 28px;
+  }
+
+  &.lightmode {
+    &:before {
+      left: 43px;
+    }
+  }
+  
+  svg:first-child {
+    color: $yellow;
+  }
+
+  svg:last-child {
+    color: $moon;
+  }
 }

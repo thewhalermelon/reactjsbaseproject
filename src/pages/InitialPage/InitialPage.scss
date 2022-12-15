@@ -1,11 +1,43 @@
+@import '../../assets/styles/variables';
+
 .app {
   .app-logo {
     animation: rotation 6s infinite linear;
+    display: block;
+    margin: auto;
+    width: 140px;
   }
 
   .title {
+    color: $tertiary-lightest;
     text-align: center;
     text-transform: uppercase;
+    text-shadow:
+      0 0 0px $tertiary-lightest,
+      0 0 0px $tertiary-lightest,
+      0 0 0px $tertiary-lightest,
+      0 0 0px $tertiary-lightest,
+      0 0 41px $tertiary-lightest,
+      0 0 5px $tertiary-lightest,
+      0 0 51px $tertiary-lightest,
+      0 0 74px $tertiary-lightest;
+    animation: flicker 1.5s infinite alternate;   
+  }
+
+  .list {
+    padding-left: 20px;
+
+    a {
+      color: $tertiary-lighter;
+      text-decoration: none;
+      transition: 0.3s ease;
+
+      &:hover {
+        color: $tertiary-lightest;
+        font-size: 1.125rem;
+        font-weight: 600;
+      }
+    }
   }
 }
 
@@ -16,4 +48,25 @@
   to {
     transform: rotate(359deg);
   }
+}
+
+@keyframes flicker {
+    
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+      text-shadow:
+      0 0 2px $tertiary-lightest,
+      0 0 2px $tertiary-lightest,
+      0 0 2px $tertiary-lightest,
+      0 0 2px $tertiary-lightest,
+      0 0 35px $tertiary-lightest,
+      0 0 1px $tertiary-lightest,
+      0 0 45px $tertiary-lightest,
+      0 0 70px $tertiary-lightest;
+  
+  }
+  
+  20%, 24%, 55% {        
+      text-shadow: none;
+  }    
 }

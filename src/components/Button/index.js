@@ -5,7 +5,7 @@ const Button = ({ title, value }) => {
   let navigate = useNavigate();
 
   return (
-    <button onClick={() => navigate(parseInt(value))}>{title}</button>
+    <button className='btn primary-btn' onClick={() => navigate(parseInt(value))}>{title}</button>
   )
 }
 
