@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Header.scss';
 import myavatar from '../../assets/images/myavatar.jpg';
 import { Sun, Moon } from 'react-feather';
+import { useDispatch, useSelector } from 'react-redux';
+import { setTheme } from '../../features/theme/themeSlice';
 
 const Header = ({ toggleTheme }) => {
+  const dispatch = useDispatch();
+  const theme = useSelector((state) => state.theme);
+
   const onChangeThemeStatus = () => {
-    toggleTheme();
+    dispatch(setTheme());
+    console.log('hoang123: ', theme);
   }
 
   return (
