@@ -40,6 +40,10 @@ body {
   &:hover {
     cursor: pointer;
   }
+
+  &.lightmode {
+    color: $tertiary-dimmer;
+  }
 }
 
 .primary-btn {
@@ -56,6 +60,15 @@ body {
     font-weight: 600;
     transform: translate(-2px, -2px);
     box-shadow: 1px 9px 17px 5px rgba(147, 230, 243, 0.16);
+  }
+
+  &.lightmode {
+    background-color: transparent;
+    border-color: $tertiary;
+
+    &:hover {
+      color: $tertiary;
+    }
   }
 }
 

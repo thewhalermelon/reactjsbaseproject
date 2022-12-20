@@ -15,9 +15,9 @@ function App() {
       <Header />
       <div className={`container ${theme.darkmode ? '' : 'lightmode'}`}>
         <Router>
-          <div className={`navigation-buttons ${theme.darkmode ? '' : 'lightmode'}`}>
-            <Button value='-1' className='primary-btn'>Back</Button>
-            <Button value='1' className='primary-btn'>Forward</Button>
+          <div className='navigation-buttons'>
+            <Button value='-1' className={`primary-btn ${theme.darkmode ? '' : 'lightmode'}`}>Back</Button>
+            <Button value='1' className={`primary-btn ${theme.darkmode ? '' : 'lightmode'}`}>Forward</Button>
           </div>
           <Routes>
             <Route path='/' element={<InitialPage />} />
