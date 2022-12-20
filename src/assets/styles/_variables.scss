@@ -21,3 +21,13 @@ $tertiary: #026190;
 $tertiary-dimmer: #014B7B;
 
 $letter-spacing: 1px;
+
+$grid-breakpoints: (
+  xxs: 0,
+  xs: 375px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1680px
+);
