@@ -1,15 +1,20 @@
 import React from 'react';
-import logo from '../../assets/images/logo.svg';
+import ReactLogo from '../../assets/images/logo';
 import { Link } from 'react-router-dom';
 import './InitialPage.scss';
-import { Camera } from 'react-feather';
+import { useSelector } from 'react-redux';
+import { REACT_LOGO_DEFAULT_COLOR, TERTIARY } from '../../constants';
 
 const InitialPage = () => {
+  const theme = useSelector((state) => state.theme);
+
   return (
     <div className='app'>
-      <img src={logo} className='app-logo' alt='logo' />
-      <h1 className='title'>original project</h1>
-      <ul className='list'>
+      <div className={`app-logo ${theme.darkmode ? '' : 'lightmode'}`}>
+        <ReactLogo fill={`${theme.darkmode ? REACT_LOGO_DEFAULT_COLOR : TERTIARY} `} />
+      </div>
+      <h1 className={`title ${theme.darkmode ? '' : 'lightmode'}`}>original project</h1>
+      <ul className={`list ${theme.darkmode ? '' : 'lightmode'}`}>
         <li className='item'>
           <a href='https://reactjs.org' target='_blank' rel='noreferrer'>
             React Homepage

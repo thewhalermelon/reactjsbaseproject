@@ -16,12 +16,17 @@ body {
   height: calc(100vh);
   padding: 16px 24px 0;
   position: relative;
+  transition: 0.3s ease;
 
   .navigation-buttons {
     position: sticky;
     top: 16px;
     margin-left: auto;
     width: fit-content;
+  }
+
+  &.lightmode {
+    background-color: $gray-light;
   }
 }
 
@@ -57,7 +62,6 @@ body {
 .toggle-btn {
   border: 2px solid $tertiary-light;
   border-radius: 20px;
-  display: block;
   height: 100%;
   padding: 0 8px;
   position: relative;
@@ -78,7 +82,10 @@ body {
   }
 
   &.lightmode {
+    border: 2px solid $tertiary;
+
     &:before {
+      background-color: $tertiary;
       left: 43px;
     }
   }

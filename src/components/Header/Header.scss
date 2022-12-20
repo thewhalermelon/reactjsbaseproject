@@ -3,6 +3,7 @@
 .header {
   background-color: $dark-dimmer;
   padding: 12px 24px;
+  transition: 0.3s ease;
   
   @include flex-box(center, space-between);
 
@@ -21,5 +22,16 @@
 
   &__right {
     height: 40px;
+  }
+
+  &.lightmode {
+    background-color: $gray;
+
+    .header__left {
+      img {
+        border: 2px solid $tertiary-dimmer;
+        width: 36px;
+      }
+    }
   }
 }

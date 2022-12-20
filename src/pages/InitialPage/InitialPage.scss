@@ -3,9 +3,13 @@
 .app {
   .app-logo {
     animation: rotation 6s infinite linear;
-    display: block;
+    display: flex;
     margin: auto;
     width: 140px;
+
+    &.lightmode {
+      animation-play-state: paused;
+    }
   }
 
   .title {
@@ -22,6 +26,12 @@
       0 0 51px $tertiary-lightest,
       0 0 74px $tertiary-lightest;
     animation: flicker 1.5s infinite alternate;   
+
+    &.lightmode {
+      color: $tertiary;
+      text-shadow: none;
+      animation: none;
+    }
   }
 
   .list {
@@ -36,6 +46,12 @@
         color: $tertiary-lightest;
         font-size: 1.125rem;
         font-weight: 600;
+      }
+    }
+
+    &.lightmode {
+      a {
+        color: $tertiary;
       }
     }
   }

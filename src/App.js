@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Button from './components/Button';
 import Header from './components/Header';
@@ -8,21 +8,16 @@ import Tips from './pages/Tips';
 import NodeJS from './pages/Tips/NodeJS';
 
 function App() {
-  const [theme, setTheme] = useState('dark');
-
-  const toggleTheme = () => {
-    console.log('click!');
-    theme === 'dark' ? setTheme('light') : setTheme('dark');
-  };
+  const theme = useSelector((state) => state.theme);
 
   return (
     <>
-      <Header toggleTheme={toggleTheme} />
-      <div className='container'>
+      <Header />
+      <div className={`container ${theme.darkmode ? '' : 'lightmode'}`}>
         <Router>
-          <div className='navigation-buttons'>
-            <Button title="Back" value='-1' />
-            <Button title="Forward" value='1' />
+          <div className={`navigation-buttons ${theme.darkmode ? '' : 'lightmode'}`}>
+            <Button value='-1' className='primary-btn'>Back</Button>
+            <Button value='1' className='primary-btn'>Forward</Button>
           </div>
           <Routes>
             <Route path='/' element={<InitialPage />} />
