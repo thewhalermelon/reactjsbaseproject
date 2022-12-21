@@ -14,7 +14,7 @@ body {
   background-color: $dark;
   color: $tertiary-light;
   height: calc(100vh - 80px);
-  padding: 16px 24px 0;
+  padding: 1rem 1.5rem 0;
   position: relative;
   transition: 0.3s ease;
 
@@ -27,6 +27,14 @@ body {
 
   &.lightmode {
     background-color: $gray-light;
+  }
+
+  @include media-breakpoint(md) {
+    padding: 1rem 3rem 0;
+  }
+
+  @include media-breakpoint(xl) {
+    padding: 1rem 6rem 0;
   }
 }
 
@@ -50,9 +58,9 @@ body {
   background-color: $dark;
   border: 2px solid $tertiary-lighter;
   border-radius: 8px;
-  margin-left: 12px;
+  margin-left: 0.75rem;
   min-width: 90px;
-  padding: 8px 0;
+  padding: 0.5rem 0;
   
   &:hover {
     border-color: $tertiary-lightest;
@@ -76,7 +84,7 @@ body {
   border: 2px solid $tertiary-light;
   border-radius: 20px;
   height: 100%;
-  padding: 0 8px;
+  padding: 0 0.5rem;
   position: relative;
   width: 80px;
     

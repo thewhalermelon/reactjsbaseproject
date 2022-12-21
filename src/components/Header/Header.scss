@@ -2,7 +2,7 @@
 
 .header {
   background-color: $dark-dimmer;
-  padding: 12px 24px;
+  padding: 0.75rem 1.5rem;
   transition: 0.3s ease;
   
   @include flex-box(center, space-between);
@@ -33,5 +33,13 @@
         width: 36px;
       }
     }
+  }
+
+  @include media-breakpoint(md) {
+    padding: 0.75rem 3rem;
+  }
+
+  @include media-breakpoint(xl) {
+    padding: 0.75rem 6rem;
   }
 }
