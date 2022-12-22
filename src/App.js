@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Button from './components/Button';
 import Header from './components/Header';
 import InitialPage from './pages/InitialPage';
-import MyProfile from './pages/Portfolio';
+import Portfolio from './pages/Portfolio';
 import Tips from './pages/Tips';
 import NodeJS from './pages/Tips/NodeJS';
 
@@ -25,7 +25,7 @@ function App() {
         <Routes>
           <Route path='/' element={<InitialPage />} />
           <Route path='/initial-page' element={<InitialPage />} />
-          <Route path='/portfolio' element={<MyProfile />} />
+          <Route path='/portfolio' element={<Portfolio />} />
 
           <Route path='/tips' element={<Tips />} />
           <Route path='/nodejs' element={<NodeJS />} />

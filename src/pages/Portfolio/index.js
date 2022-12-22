@@ -2,7 +2,7 @@ import React from 'react';
 import portrait from '../../assets/images/portrait.jpg';
 import './Portfolio.scss';
 
-const MyProfile = () => {
+const Portfolio = () => {
   return (
     <div className='portfolio'>
       <div className='header'>
@@ -17,4 +17,4 @@ const MyProfile = () => {
   );
 };
 
-export default MyProfile;
+export default Portfolio;

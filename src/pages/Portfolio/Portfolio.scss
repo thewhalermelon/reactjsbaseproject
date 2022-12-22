@@ -20,7 +20,7 @@
 
       .image {
         border-radius: 8px;
-        border: 1px solid $gray-dimmer;
+        border: 1px solid $tertiary-lightest;
         width: 30%;
       }
 
@@ -42,7 +42,7 @@
   &.lightmode {
     .portfolio {
       background-color: $gray;
-      border: 1px solid $gray-dimmer;
+      border: 1px solid $tertiary-lightest;
     }
   }
 }
