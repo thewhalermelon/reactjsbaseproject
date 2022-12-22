@@ -10,7 +10,7 @@ const Tips = () => {
         </li>
       </ul>
     </div>
-  )
-}
+  );
+};
 
 export default Tips;

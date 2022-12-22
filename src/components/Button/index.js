@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 import { setTheme } from '../../features/theme/themeSlice';
 
 const Button = ({ value, className, children, isNavigateButton }) => {
@@ -13,11 +13,13 @@ const Button = ({ value, className, children, isNavigateButton }) => {
 
   const onChangeThemeStatus = () => {
     dispatch(setTheme());
-  }
+  };
 
   return (
-    <button className={`btn ${className}`} onClick={() => isNavigateButton ? onNavigatePage(value) : onChangeThemeStatus()}>{children}</button>
-  )
-}
+    <button className={`btn ${className}`} onClick={() => (isNavigateButton ? onNavigatePage(value) : onChangeThemeStatus())}>
+      {children}
+    </button>
+  );
+};
 
 export default Button;

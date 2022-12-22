@@ -10,7 +10,7 @@ const NodeJS = () => {
         </li>
       </ul>
     </div>
-  )
-}
+  );
+};
 
 export default NodeJS;

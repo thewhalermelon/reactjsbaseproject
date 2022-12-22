@@ -13,10 +13,14 @@ function App() {
   return (
     <Router>
       <Header />
-      <div className={`container ${theme.darkmode ? '' : 'lightmode'}`}>
+      <div className={'container' + `${theme.darkmode ? '' : ' lightmode'}`}>
         <div className='navigation-buttons'>
-          <Button value='-1' className='primary-btn' isNavigateButton={true}>Back</Button>
-          <Button value='1' className='primary-btn' isNavigateButton={true}>Forward</Button>
+          <Button value='-1' className='primary-btn' isNavigateButton={true}>
+            Back
+          </Button>
+          <Button value='1' className='primary-btn' isNavigateButton={true}>
+            Forward
+          </Button>
         </div>
         <Routes>
           <Route path='/' element={<InitialPage />} />

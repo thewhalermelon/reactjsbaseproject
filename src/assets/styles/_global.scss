@@ -12,11 +12,12 @@ body {
 
 .container {
   background-color: $dark;
-  color: $tertiary-light;
-  height: calc(100vh - 80px);
+  color: $tertiary-lighter;
+  height: calc(100vh - 81px);
   padding: 1rem 1.5rem 0;
   position: relative;
-  transition: 0.3s ease;
+
+  @include transition();
 
   .primary-btn {
     background-color: $dark;
@@ -70,49 +71,10 @@ body {
   border: none;
   color: $tertiary-lighter;
   font-size: 1rem;
-  transition: 0.3s ease;
+
+  @include transition();
 
   &:hover {
     cursor: pointer;
   }
 }
-
-// .toggle-btn {
-//   border: 2px solid $tertiary-light;
-//   border-radius: 20px;
-//   height: 100%;
-//   padding: 0 0.5rem;
-//   position: relative;
-//   width: 80px;
-
-//   @include flex-box(center, space-between);
-
-//   &:before {
-//     content: '';
-//     background-color: $tertiary-lightest;
-//     border-radius: 50%;
-//     height: 28px;
-//     left: 5px;
-//     position: absolute;
-//     top: 4px;
-//     transition: 0.5s ease;
-//     width: 28px;
-//   }
-
-//   &.lightmode {
-//     border: 2px solid $tertiary;
-
-//     &:before {
-//       background-color: $tertiary;
-//       left: 43px;
-//     }
-//   }
-
-//   svg:first-child {
-//     color: $yellow;
-//   }
-
-//   svg:last-child {
-//     color: $moon;
-//   }
-// }

@@ -23,3 +23,7 @@
         + "Available breakpoints are: #{map-keys($breakpoints)}.";
   }
 }
+
+@mixin transition() {
+  transition: 0.4s ease;
+}

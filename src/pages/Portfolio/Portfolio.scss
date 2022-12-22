@@ -1,0 +1,48 @@
+@import '../../assets/styles/app.scss';
+
+.container {
+  .portfolio {
+    background-color: $dark-dimmer;
+    border: 1px solid $dark-dimmer;
+    border-radius: 8px;
+    font-size: 0.9375rem;
+    margin-top: 1rem;
+    padding: 1rem;
+
+    @include transition();
+
+    .header {
+      background-color: unset;
+      border: none;
+      padding: 0;
+
+      @include flex-box(center, start);
+
+      .image {
+        border-radius: 8px;
+        border: 1px solid $gray-dimmer;
+        width: 30%;
+      }
+
+      .text {
+        padding-left: 1rem;
+
+        span {
+          display: block;
+
+          &.name {
+            font-size: 1rem;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+  &.lightmode {
+    .portfolio {
+      background-color: $gray;
+      border: 1px solid $gray-dimmer;
+    }
+  }
+}
