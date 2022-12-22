@@ -10,18 +10,18 @@ const InitialPage = () => {
 
   return (
     <div className='app'>
-      <div className={`app-logo ${theme.darkmode ? '' : 'lightmode'}`}>
+      <div className='app-logo'>
         <ReactLogo fill={`${theme.darkmode ? REACT_LOGO_DEFAULT_COLOR : TERTIARY} `} />
       </div>
-      <h1 className={`title ${theme.darkmode ? '' : 'lightmode'}`}>original project</h1>
-      <ul className={`list ${theme.darkmode ? '' : 'lightmode'}`}>
+      <h1 className='title'>original project</h1>
+      <ul className='list'>
         <li className='item'>
           <a href='https://reactjs.org' target='_blank' rel='noreferrer'>
             React Homepage
           </a>
         </li>
         <li className='item'>
-          <Link to='/my-profile'>Profile</Link>
+          <Link to='/portfolio'>Portfolio</Link>
         </li>
         <li className='item'>
           <Link to='/tips'>Tips</Link>

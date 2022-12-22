@@ -18,6 +18,23 @@ body {
   position: relative;
   transition: 0.3s ease;
 
+  .primary-btn {
+    background-color: $dark;
+    border: 2px solid $tertiary-lighter;
+    border-radius: 8px;
+    margin-left: 0.75rem;
+    min-width: 90px;
+    padding: 0.5rem 0;
+
+    &:hover {
+      border-color: $tertiary-lightest;
+      color: $tertiary-lightest;
+      font-weight: 600;
+      transform: translate(-2px, -2px);
+      box-shadow: 1px 9px 17px 5px rgba(147, 230, 243, 0.16);
+    }
+  }
+
   .navigation-buttons {
     position: sticky;
     top: 16px;
@@ -27,6 +44,16 @@ body {
 
   &.lightmode {
     background-color: $gray-light;
+
+    .primary-btn {
+      background-color: transparent;
+      border-color: $tertiary;
+      color: $tertiary-dimmer;
+
+      &:hover {
+        color: $tertiary;
+      }
+    }
   }
 
   @include media-breakpoint(md) {
@@ -48,74 +75,44 @@ body {
   &:hover {
     cursor: pointer;
   }
-
-  &.lightmode {
-    color: $tertiary-dimmer;
-  }
 }
 
-.primary-btn {
-  background-color: $dark;
-  border: 2px solid $tertiary-lighter;
-  border-radius: 8px;
-  margin-left: 0.75rem;
-  min-width: 90px;
-  padding: 0.5rem 0;
-  
-  &:hover {
-    border-color: $tertiary-lightest;
-    color: $tertiary-lightest;
-    font-weight: 600;
-    transform: translate(-2px, -2px);
-    box-shadow: 1px 9px 17px 5px rgba(147, 230, 243, 0.16);
-  }
+// .toggle-btn {
+//   border: 2px solid $tertiary-light;
+//   border-radius: 20px;
+//   height: 100%;
+//   padding: 0 0.5rem;
+//   position: relative;
+//   width: 80px;
 
-  &.lightmode {
-    background-color: transparent;
-    border-color: $tertiary;
+//   @include flex-box(center, space-between);
 
-    &:hover {
-      color: $tertiary;
-    }
-  }
-}
+//   &:before {
+//     content: '';
+//     background-color: $tertiary-lightest;
+//     border-radius: 50%;
+//     height: 28px;
+//     left: 5px;
+//     position: absolute;
+//     top: 4px;
+//     transition: 0.5s ease;
+//     width: 28px;
+//   }
 
-.toggle-btn {
-  border: 2px solid $tertiary-light;
-  border-radius: 20px;
-  height: 100%;
-  padding: 0 0.5rem;
-  position: relative;
-  width: 80px;
-    
-  @include flex-box(center, space-between);
+//   &.lightmode {
+//     border: 2px solid $tertiary;
 
-  &:before {
-    content: '';
-    background-color: $tertiary-lightest;
-    border-radius: 50%;
-    height: 28px;
-    left: 5px;
-    position: absolute;
-    top: 4px;
-    transition: 0.5s ease;
-    width: 28px;
-  }
+//     &:before {
+//       background-color: $tertiary;
+//       left: 43px;
+//     }
+//   }
 
-  &.lightmode {
-    border: 2px solid $tertiary;
+//   svg:first-child {
+//     color: $yellow;
+//   }
 
-    &:before {
-      background-color: $tertiary;
-      left: 43px;
-    }
-  }
-  
-  svg:first-child {
-    color: $yellow;
-  }
-
-  svg:last-child {
-    color: $moon;
-  }
-}
+//   svg:last-child {
+//     color: $moon;
+//   }
+// }

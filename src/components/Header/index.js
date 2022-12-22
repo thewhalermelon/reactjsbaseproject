@@ -2,17 +2,11 @@ import React from 'react';
 import './Header.scss';
 import myavatar from '../../assets/images/myavatar.jpg';
 import { Sun, Moon } from 'react-feather';
-import { useDispatch, useSelector } from 'react-redux';
-import { setTheme } from '../../features/theme/themeSlice';
+import { useSelector } from 'react-redux';
 import Button from '../Button';
 
 const Header = () => {
-  const dispatch = useDispatch();
   const theme = useSelector((state) => state.theme);
-
-  const onChangeThemeStatus = () => {
-    dispatch(setTheme());
-  }
 
   return (
     <div className={`header ${theme.darkmode ? '' : 'lightmode'}`}>
@@ -21,10 +15,10 @@ const Header = () => {
         <span>TheWhalerMelon</span>
       </div>
       <div className='header__right'>
-        <button onClick={onChangeThemeStatus} className={`btn toggle-btn ${theme.darkmode ? '' : 'lightmode'}`}>
+        <Button className='toggle-btn' isNavigateButton={false}>
           <Sun />
           <Moon />
-        </button>
+        </Button>
       </div>
     </div>
   );
