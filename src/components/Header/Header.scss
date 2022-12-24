@@ -49,6 +49,7 @@
     @include flex-box(center, flex-start);
 
     img {
+      border: 2px solid $dark-dimmer;
       border-radius: 50%;
       width: 40px;
     }
@@ -69,7 +70,7 @@
     .header__left {
       img {
         border: 2px solid $tertiary-dimmer;
-        width: 36px;
+        width: 40px;
       }
     }
 

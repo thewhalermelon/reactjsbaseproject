@@ -13,7 +13,7 @@ function App() {
   return (
     <Router>
       <Header />
-      <div className={'container' + `${theme.darkmode ? '' : ' lightmode'}`}>
+      <div className={'custom-container' + `${theme.darkmode ? '' : ' lightmode'}`}>
         <div className='navigation-buttons'>
           <Button value='-1' className='primary-btn' isNavigateButton={true}>
             Back

@@ -1,6 +1,6 @@
 @import '../../assets/styles/app.scss';
 
-.container {
+.custom-container {
   .portfolio {
     background-color: $dark-dimmer;
     border: 1px solid $dark-dimmer;
@@ -8,8 +8,6 @@
     font-size: 0.9375rem;
     margin-top: 1rem;
     padding: 1rem;
-
-    @include transition();
 
     .header {
       background-color: unset;
@@ -25,14 +23,15 @@
       }
 
       .text {
+        line-height: initial;
         padding-left: 1rem;
 
         span {
           display: block;
 
           &.name {
-            font-size: 1rem;
-            font-weight: 700;
+            font-size: 1.5rem;
+            font-weight: 600;
           }
         }
       }

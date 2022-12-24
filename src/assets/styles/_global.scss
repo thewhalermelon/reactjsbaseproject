@@ -10,11 +10,11 @@ body {
   margin: 0;
 }
 
-.container {
+.custom-container {
   background-color: $dark;
   color: $tertiary-lighter;
-  height: calc(100vh - 81px);
-  padding: 1rem 1.5rem 0;
+  height: calc(100vh - 65px);
+  padding: 1rem 1.5rem;
   position: relative;
 
   @include transition();
@@ -45,6 +45,7 @@ body {
 
   &.lightmode {
     background-color: $gray-light;
+    color: $tertiary;
 
     .primary-btn {
       background-color: transparent;
