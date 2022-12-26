@@ -17,7 +17,7 @@ const AccordionComponent = ({ data }) => {
           <Accordion.Item eventKey={index} key={item.header}>
             <Accordion.Header>
               {/* {onGenerateIcon(item.icon)} */}
-              <Briefcase />
+              {/* <Briefcase /> */}
               {item.header}
               <ChevronDown />
             </Accordion.Header>
