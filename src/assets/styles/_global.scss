@@ -13,11 +13,9 @@ body {
 .custom-container {
   background-color: $dark;
   color: $tertiary-lighter;
-  height: calc(100vh - 65px);
+  min-height: calc(100vh - 65px);
   padding: 1rem 1.5rem;
   position: relative;
-
-  @include transition();
 
   .primary-btn {
     background-color: $dark;
@@ -37,19 +35,17 @@ body {
   }
 
   .navigation-buttons {
-    position: sticky;
-    top: 16px;
     margin-left: auto;
     width: fit-content;
   }
 
   &.lightmode {
     background-color: $gray-light;
-    color: $tertiary;
+    color: $tertiary-dimmer;
 
     .primary-btn {
       background-color: transparent;
-      border-color: $tertiary;
+      border-color: $tertiary-dimmer;
       color: $tertiary-dimmer;
 
       &:hover {

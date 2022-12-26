@@ -6,6 +6,8 @@ export default class AccordionModel {
     this['header'] = '';
 
     this['body'] = [];
+
+    this['icon'] = '';
   }
 
   getData(dataSource) {
@@ -21,6 +23,10 @@ export default class AccordionModel {
       });
 
       this['body'] = newList;
+    }
+
+    if (dataSource && Object.prototype.hasOwnProperty.call(dataSource, 'icon')) {
+      this.icon = dataSource.icon ?? this.icon;
     }
 
     return this;

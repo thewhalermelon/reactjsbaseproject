@@ -17,7 +17,8 @@ const AccordionData = [
           'Enjoy cycling, listening to music, playing game and outdoor activities.'
         ]
       }
-    ]
+    ],
+    icon: 'User'
   },
   {
     header: 'Employment history',
@@ -31,7 +32,8 @@ const AccordionData = [
           'Proactively communicate and discuss with Business Analysis and Back-End to find out the best solution for project.'
         ]
       }
-    ]
+    ],
+    icon: 'Briefcase'
   },
   {
     header: 'Education',
@@ -44,7 +46,8 @@ const AccordionData = [
         title: 'Techmaster',
         subtitle: 'January 2020 - August 2020'
       }
-    ]
+    ],
+    icon: 'BookOpen'
   },
   {
     header: 'Details',
@@ -108,14 +111,6 @@ const AccordionData = [
       },
       {
         title: 'English'
-      }
-    ]
-  },
-  {
-    header: 'Relationship',
-    body: [
-      {
-        title: 'True love'
       }
     ]
   }
