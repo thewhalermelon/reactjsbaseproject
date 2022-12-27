@@ -9,7 +9,7 @@ const Header = () => {
   const theme = useSelector((state) => state.theme);
 
   return (
-    <div className={'header' + `${theme.darkmode ? '' : ' lightmode'}`}>
+    <div className={'header' + `${theme.darkmode ? ' darkmode' : ' lightmode'}`}>
       <div className='header__left'>
         <img src={myavatar} alt='my-avatar' />
         <span>TheWhalerMelon</span>

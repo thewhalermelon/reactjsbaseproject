@@ -2,8 +2,8 @@
 
 .custom-container {
   .portfolio {
-    background-color: $dark-dimmer;
-    border: 1px solid $dark-dimmer;
+    background-color: var(--primary-background);
+    border: 1px solid var(--primary-border);
     border-radius: 8px;
     font-size: 0.9375rem;
     margin-top: 1rem;
@@ -35,13 +35,6 @@
           }
         }
       }
-    }
-  }
-
-  &.lightmode {
-    .portfolio {
-      background-color: $gray;
-      border: 1px solid $tertiary-lightest;
     }
   }
 }

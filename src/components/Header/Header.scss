@@ -1,41 +1,42 @@
-@import '../../assets/styles/app.scss';
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixins';
 
 .header {
-  background-color: $dark-dimmer;
-  border-bottom: 1px solid $dark-dimmer;
+  background-color: var(--primary-background);
+  border-bottom: 1px solid var(--primary-border);
   padding: 0.75rem 1.5rem;
-    
+
   @include transition();
-  
+
   @include flex-box(center, space-between);
 
   .toggle-btn {
-    border: 2px solid $tertiary-light;
+    border: 2px solid var(--border-toggle-btn);
     border-radius: 20px;
     height: 100%;
     padding: 0 0.5rem;
     position: relative;
     width: 80px;
-      
+
     @include flex-box(center, space-between);
-  
+
     &:before {
       content: '';
-      background-color: $tertiary-lightest;
+      background-color: var(--toggle-btn);
       border-radius: 50%;
       height: 28px;
       left: 5px;
       position: absolute;
       top: 4px;
       width: 28px;
-      
+
       @include transition();
     }
-    
+
     svg:first-child {
       color: $yellow;
     }
-  
+
     svg:last-child {
       color: $moon;
     }
@@ -49,7 +50,7 @@
     @include flex-box(center, flex-start);
 
     img {
-      border: 2px solid $dark-dimmer;
+      border: 2px solid var(--header-border-avatar);
       border-radius: 50%;
       width: 40px;
     }
@@ -64,21 +65,8 @@
   }
 
   &.lightmode {
-    background-color: $gray;
-    border-bottom: 1px solid $tertiary-lightest;
-
-    .header__left {
-      img {
-        border: 2px solid $tertiary-dimmer;
-        width: 40px;
-      }
-    }
-
     .toggle-btn {
-      border: 2px solid $tertiary;
-  
       &:before {
-        background-color: $tertiary;
         left: 43px;
       }
     }

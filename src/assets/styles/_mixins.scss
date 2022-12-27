@@ -16,7 +16,7 @@
       @content;
     }
   }
- 
+
   // If the key doesn't exist in the map
   @else {
     @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
@@ -26,4 +26,26 @@
 
 @mixin transition() {
   transition: 0.3s ease;
+}
+
+@mixin light-theme() {
+  --primary-background: #{$gray};
+  --border-toggle-btn: #{$tertiary};
+  --toggle-btn: #{$tertiary};
+  --primary-border: #{$tertiary-lightest};
+  --header-border-avatar: #{$tertiary-dimmer};
+  --body-container: #{$gray-light};
+  --text-color: #{$tertiary};
+  --border-primary-btn-hover: #{$tertiary-dimmer};
+}
+
+@mixin dark-theme() {
+  --primary-background: #{$dark-dimmer};
+  --border-toggle-btn: #{$tertiary-light};
+  --toggle-btn: #{$tertiary-lightest};
+  --primary-border: #{$dark-dimmer};
+  --header-border-avatar: #{$dark-dimmer};
+  --body-container: #{$dark};
+  --text-color: #{$tertiary-lighter};
+  --border-primary-btn-hover: #{$tertiary-lightest};
 }

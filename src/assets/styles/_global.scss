@@ -1,4 +1,4 @@
-@import '../../assets/styles/variables';
+@import './variables';
 @import './mixins';
 
 body {
@@ -10,24 +10,33 @@ body {
   margin: 0;
 }
 
+.lightmode {
+  @include light-theme();
+}
+
+.darkmode {
+  @include dark-theme();
+}
+
 .custom-container {
-  background-color: $dark;
-  color: $tertiary-lighter;
+  background-color: var(--body-container);
+  color: var(--text-color);
   min-height: calc(100vh - 65px);
   padding: 1rem 1.5rem;
   position: relative;
 
   .primary-btn {
-    background-color: $dark;
-    border: 2px solid $tertiary-lighter;
+    background-color: transparent;
+    border: 2px solid var(--text-color);
     border-radius: 8px;
+    color: var(--text-color);
     margin-left: 0.75rem;
     min-width: 90px;
     padding: 0.5rem 0;
 
     &:hover {
-      border-color: $tertiary-lightest;
-      color: $tertiary-lightest;
+      border-color: var(--border-primary-btn-hover);
+      color: var(--border-primary-btn-hover);
       font-weight: 600;
       transform: translate(-2px, -2px);
       box-shadow: 1px 9px 17px 5px rgba(147, 230, 243, 0.16);
@@ -37,21 +46,6 @@ body {
   .navigation-buttons {
     margin-left: auto;
     width: fit-content;
-  }
-
-  &.lightmode {
-    background-color: $gray-light;
-    color: $tertiary-dimmer;
-
-    .primary-btn {
-      background-color: transparent;
-      border-color: $tertiary-dimmer;
-      color: $tertiary-dimmer;
-
-      &:hover {
-        color: $tertiary;
-      }
-    }
   }
 
   @include media-breakpoint(md) {

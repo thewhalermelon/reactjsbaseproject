@@ -10,7 +10,7 @@
     }
 
     .title {
-      color: $tertiary-lightest;
+      color: var(--toggle-btn);
       text-align: center;
       text-transform: uppercase;
       text-shadow: 0 0 0px $tertiary-lightest, 0 0 0px $tertiary-lightest, 0 0 0px $tertiary-lightest, 0 0 0px $tertiary-lightest,
@@ -22,13 +22,13 @@
       padding-left: 20px;
 
       a {
-        color: $tertiary-lighter;
+        color: var(--text-color);
         text-decoration: none;
 
         @include transition();
 
         &:hover {
-          color: $tertiary-lightest;
+          color: var(--border-primary-btn-hover);
           font-size: 1.125rem;
           font-weight: 600;
         }
@@ -43,15 +43,8 @@
       }
 
       .title {
-        color: $tertiary;
         text-shadow: none;
         animation: none;
-      }
-
-      .list {
-        a {
-          color: $tertiary;
-        }
       }
     }
   }
