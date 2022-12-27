@@ -1,13 +1,19 @@
 import React from 'react';
 import { Accordion } from 'react-bootstrap';
-import { Briefcase, ChevronDown } from 'react-feather';
+import * as Icon from 'react-feather';
 import './Accordion.scss';
 
 const AccordionComponent = ({ data }) => {
   const onGenerateIcon = (icon) => {
-    let CustomTag = `${icon}`;
+    if (icon) {
+      let CustomTag = Icon[icon];
 
-    return <CustomTag />;
+      return (
+        <span className='first-icon'>
+          <CustomTag />
+        </span>
+      );
+    }
   };
 
   return (
@@ -16,22 +22,39 @@ const AccordionComponent = ({ data }) => {
         return (
           <Accordion.Item eventKey={index} key={item.header}>
             <Accordion.Header>
-              {/* {onGenerateIcon(item.icon)} */}
-              {/* <Briefcase /> */}
-              {item.header}
-              <ChevronDown />
+              {onGenerateIcon(item.icon)}
+              <span>{item.header}</span>
+              <div className='second-icon'>
+                <Icon.ChevronDown />
+              </div>
             </Accordion.Header>
-            {item.body.map((bodyItem, bodyIndex) => {
-              return (
-                <Accordion.Body key={bodyIndex}>
-                  {bodyItem.title}
-                  {bodyItem.subtitle}
-                  {bodyItem.content.map((contentItem, contentIndex) => {
-                    return <div key={contentIndex}>{contentItem}</div>;
-                  })}
-                </Accordion.Body>
-              );
-            })}
+            <Accordion.Body>
+              <ol>
+                {item.body.map((bodyItem, bodyIndex) => {
+                  return (
+                    <>
+                      {bodyItem.title ? (
+                        <li key={bodyIndex}>
+                          {bodyItem.title}
+                          {bodyItem.subtitle}
+                          <ul>
+                            {bodyItem.content.map((contentItem, contentIndex) => {
+                              return <li key={contentIndex}>{contentItem}</li>;
+                            })}
+                          </ul>
+                        </li>
+                      ) : (
+                        <ul>
+                          {bodyItem.content.map((contentItem, contentIndex) => {
+                            return <li key={contentIndex}>{contentItem}</li>;
+                          })}
+                        </ul>
+                      )}
+                    </>
+                  );
+                })}
+              </ol>
+            </Accordion.Body>
           </Accordion.Item>
         );
       })}

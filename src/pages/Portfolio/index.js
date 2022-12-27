@@ -24,6 +24,8 @@ const AccordionData = [
     header: 'Employment history',
     body: [
       {
+        title: 'Front-End Programming Staff at SmartOSC',
+        subtitle: 'December 2019 - March 2022',
         content: [
           'Support the senior with daily tasks.',
           'Convert PSD file to HTML and CSS.',
@@ -53,13 +55,7 @@ const AccordionData = [
     header: 'Details',
     body: [
       {
-        title: '25 Ho Dac Di, Dong Da'
-      },
-      {
-        title: 'Hanoi'
-      },
-      {
-        title: 'Vietnam'
+        title: '25 Ho Dac Di, Dong Da, Hanoi, Vietnam'
       },
       {
         title: '0904680496'
@@ -73,7 +69,7 @@ const AccordionData = [
     header: 'Date/Place of birth',
     body: [
       {
-        title: '08/04/1996 Nghe An'
+        content: ['08/04/1996 Nghe An']
       }
     ]
   },
@@ -97,6 +93,9 @@ const AccordionData = [
       },
       {
         title: 'Redux, Redux Toolkit'
+      },
+      {
+        title: 'NextJS'
       },
       {
         title: 'Git'
