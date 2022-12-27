@@ -25,6 +25,8 @@ body {
   padding: 1rem 1.5rem;
   position: relative;
 
+  @include transition();
+
   .primary-btn {
     background-color: transparent;
     border: 2px solid var(--text-color);

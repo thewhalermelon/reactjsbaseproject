@@ -35,8 +35,8 @@ const AccordionComponent = ({ data }) => {
                     <>
                       {bodyItem.title ? (
                         <li key={bodyIndex}>
-                          {bodyItem.title}
-                          {bodyItem.subtitle}
+                          <p>{bodyItem.title}</p>
+                          <span>{bodyItem.subtitle}</span>
                           <ul>
                             {bodyItem.content.map((contentItem, contentIndex) => {
                               return <li key={contentIndex}>{contentItem}</li>;
