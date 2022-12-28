@@ -37,6 +37,8 @@
   --body-container: #{$gray-light};
   --text-color: #{$tertiary};
   --border-primary-btn-hover: #{$tertiary-dimmer};
+  --accordion-header-border: #{$tertiary};
+  --accordion-border: #{$gray-dimmer};
 }
 
 @mixin dark-theme() {
@@ -48,4 +50,6 @@
   --body-container: #{$dark};
   --text-color: #{$tertiary-lighter};
   --border-primary-btn-hover: #{$tertiary-lightest};
+  --accordion-header-border: #{$dark-light};
+  --accordion-border: #{$dark};
 }

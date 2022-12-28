@@ -2,9 +2,9 @@
 
 .custom-container {
   .accordion {
-    background-color: $dark;
+    background-color: var(--body-container);
     border-radius: 8px;
-    border: 1px solid $dark;
+    border: 1px solid var(--accordion-border);
     margin-top: 16px;
 
     .accordion-item {
@@ -19,7 +19,7 @@
         .accordion-button {
           background-color: transparent;
           border: none;
-          color: $tertiary-lighter;
+          color: var(--text-color);
           font-size: 1rem;
           font-weight: 600;
           padding: 0 0 4px 36px;
@@ -49,7 +49,7 @@
           }
 
           &:not(.collapsed) {
-            border-bottom: 1px solid $dark-light;
+            border-bottom: 1px solid var(--accordion-header-border);
 
             .second-icon {
               transform: rotate(180deg);
@@ -97,9 +97,9 @@
       }
 
       &:hover {
-        background-color: $dark-dimmer;
+        background-color: var(--primary-background);
         .accordion-button {
-          color: $tertiary-lightest;
+          color: var(-border-primary-btn-hover);
         }
       }
     }
