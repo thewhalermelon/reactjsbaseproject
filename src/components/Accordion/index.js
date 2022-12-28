@@ -1,21 +1,10 @@
 import React, { Fragment } from 'react';
 import { Accordion } from 'react-bootstrap';
 import * as Icon from 'react-feather';
+import { onGenerateIcon } from '../../utils/utilities';
 import './Accordion.scss';
 
 const AccordionComponent = ({ data }) => {
-  const onGenerateIcon = (icon) => {
-    if (icon) {
-      let CustomTag = Icon[icon];
-
-      return (
-        <span className='first-icon'>
-          <CustomTag />
-        </span>
-      );
-    }
-  };
-
   return (
     <Accordion>
       {data.map((item, index) => {

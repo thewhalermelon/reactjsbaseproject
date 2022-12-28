@@ -35,6 +35,22 @@
       }
     }
   }
+
+  &_body {
+    font-weight: 600;
+    padding-top: 32px;
+
+    @include flex-box(start, start);
+
+    .main-column {
+      flex-grow: 7;
+      font-size: 1.125rem;
+    }
+
+    .side-column {
+      flex-grow: 3;
+    }
+  }
 }
 
 @include media-breakpoint(md) {
