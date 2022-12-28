@@ -1,5 +1,4 @@
-@import '../../assets/styles/variables';
-@import '../../assets/styles/mixins';
+@import '../../assets/styles/app.scss';
 
 .header {
   background-color: var(--primary-background);
@@ -71,12 +70,16 @@
       }
     }
   }
+}
 
-  @include media-breakpoint(md) {
+@include media-breakpoint(md) {
+  .header {
     padding: 0.75rem 3rem;
   }
+}
 
-  @include media-breakpoint(xl) {
+@include media-breakpoint(xl) {
+  .header {
     padding: 0.75rem 6rem;
   }
 }

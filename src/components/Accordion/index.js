@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Accordion } from 'react-bootstrap';
 import * as Icon from 'react-feather';
 import './Accordion.scss';
@@ -32,7 +32,7 @@ const AccordionComponent = ({ data }) => {
               <ol>
                 {item.body.map((bodyItem, bodyIndex) => {
                   return (
-                    <>
+                    <Fragment key={bodyIndex}>
                       {bodyItem.title ? (
                         <li key={bodyIndex}>
                           <p>{bodyItem.title}</p>
@@ -50,7 +50,7 @@ const AccordionComponent = ({ data }) => {
                           })}
                         </ul>
                       )}
-                    </>
+                    </Fragment>
                   );
                 })}
               </ol>

@@ -105,3 +105,11 @@
     }
   }
 }
+
+@include media-breakpoint(md) {
+  .custom-container {
+    .accordion {
+      margin-top: 24px;
+    }
+  }
+}

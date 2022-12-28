@@ -4,6 +4,7 @@ import Accordion from '../../components/Accordion';
 import './Portfolio.scss';
 import { deepCopy } from '../../utils/utilities';
 import AccordionModel from './model/AccordionModel';
+import PortfolioBody from './PortfolioBody';
 
 const AccordionData = [
   {
@@ -131,7 +132,7 @@ const Portfolio = () => {
   return (
     dataFields && (
       <div className='portfolio'>
-        <div className='header'>
+        <div className='portfolio_header'>
           <img src={portrait} className='image' alt='portrait' />
           <div className='text'>
             <span className='name'>Hoang TRAN</span>
@@ -139,6 +140,7 @@ const Portfolio = () => {
           </div>
         </div>
         <Accordion data={dataFields} />
+        <PortfolioBody data={dataFields} />
       </div>
     )
   );

@@ -1,39 +1,69 @@
 @import '../../assets/styles/app.scss';
 
-.custom-container {
+.portfolio {
+  background-color: var(--primary-background);
+  border: 1px solid var(--primary-border);
+  border-radius: 8px;
+  font-size: 0.9375rem;
+  margin-top: 1rem;
+  padding: 1rem;
+
+  &_header {
+    background-color: unset;
+    border: none;
+    padding: 0;
+
+    @include flex-box(center, start);
+
+    .image {
+      border-radius: 8px;
+      border: 1px solid $tertiary-lightest;
+      width: 30%;
+    }
+
+    .text {
+      line-height: initial;
+      padding-left: 1rem;
+
+      span {
+        display: block;
+
+        &.name {
+          font-size: 1.5rem;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint(md) {
   .portfolio {
-    background-color: var(--primary-background);
-    border: 1px solid var(--primary-border);
-    border-radius: 8px;
-    font-size: 0.9375rem;
-    margin-top: 1rem;
-    padding: 1rem;
+    padding: 1rem 2rem;
 
-    .header {
-      background-color: unset;
-      border: none;
-      padding: 0;
-
-      @include flex-box(center, start);
-
+    &_header {
       .image {
-        border-radius: 8px;
-        border: 1px solid $tertiary-lightest;
-        width: 30%;
+        width: 26%;
       }
 
       .text {
-        line-height: initial;
-        padding-left: 1rem;
+        padding-left: 2rem;
+      }
+    }
+  }
+}
 
-        span {
-          display: block;
+@include media-breakpoint(xl) {
+  .portfolio {
+    padding: 2rem 3rem;
 
-          &.name {
-            font-size: 1.5rem;
-            font-weight: 600;
-          }
-        }
+    &_header {
+      .image {
+        width: 13%;
+      }
+
+      .text {
+        padding-left: 1.5rem;
       }
     }
   }
