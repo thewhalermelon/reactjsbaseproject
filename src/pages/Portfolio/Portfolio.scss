@@ -117,7 +117,9 @@
       }
     }
 
-    &__body {
+    &_body {
+      display: flex;
+
       @include flex-box(start, start);
     }
   }

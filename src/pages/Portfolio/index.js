@@ -5,132 +5,27 @@ import './Portfolio.scss';
 import { deepCopy } from '../../utils/utilities';
 import AccordionModel from './model/AccordionModel';
 import PortfolioBody from './PortfolioBody';
-
-const AccordionData = [
-  {
-    header: 'Profile',
-    body: [
-      {
-        content: [
-          'Hardworking and responsible Front-End Developer with several year.',
-          'A progressive and open-minded person.',
-          'Looking forward to having the opportunity to work with many new frameworks and libraries.',
-          'Enjoy cycling, listening to music, playing game and outdoor activities.'
-        ]
-      }
-    ],
-    icon: 'User'
-  },
-  {
-    header: 'Employment history',
-    body: [
-      {
-        title: 'Front-End Programming Staff at SmartOSC',
-        subtitle: 'December 2019 - March 2022',
-        content: [
-          'Support the senior with daily tasks.',
-          'Convert PSD file to HTML and CSS.',
-          'Apply the appropriate library for project and customize if needed.',
-          'Cook and integrate data from API that provided from Back-End.',
-          'Proactively communicate and discuss with Business Analysis and Back-End to find out the best solution for project.'
-        ]
-      }
-    ],
-    icon: 'Briefcase'
-  },
-  {
-    header: 'Education',
-    body: [
-      {
-        title: 'Bachelor, Posts and Telecommunications Institute of Technology',
-        subtitle: 'June 2014 - January 2019'
-      },
-      {
-        title: 'Techmaster',
-        subtitle: 'January 2020 - August 2020'
-      }
-    ],
-    icon: 'BookOpen'
-  },
-  {
-    header: 'Details',
-    body: [
-      {
-        title: '25 Ho Dac Di, Dong Da, Hanoi, Vietnam'
-      },
-      {
-        title: '0904680496'
-      },
-      {
-        title: 'tranhuyhoang8496@gmail.com'
-      }
-    ]
-  },
-  {
-    header: 'Date/Place of birth',
-    body: [
-      {
-        content: ['08/04/1996 Nghe An']
-      }
-    ]
-  },
-  {
-    header: 'Skills',
-    body: [
-      {
-        title: 'HTML & CSS'
-      },
-      {
-        title: 'JavaScript'
-      },
-      {
-        title: 'JQuery'
-      },
-      {
-        title: 'Bootstrap'
-      },
-      {
-        title: 'ReactJS'
-      },
-      {
-        title: 'Redux, Redux Toolkit'
-      },
-      {
-        title: 'NextJS'
-      },
-      {
-        title: 'Git'
-      }
-    ]
-  },
-  {
-    header: 'Languages',
-    body: [
-      {
-        title: 'Vietnamese'
-      },
-      {
-        title: 'English'
-      }
-    ]
-  }
-];
+import { useGetPortfolioQuery } from '../../features/api/portfolioSlice';
 
 const Portfolio = () => {
   const [dataFields, setDataFields] = useState(null);
+  const { data: portfolioData } = useGetPortfolioQuery();
 
   useEffect(() => {
-    let newArray = [];
+    if (portfolioData) {
+      let newArray = [];
 
-    AccordionData.map((ele) => {
-      return newArray.push(new AccordionModel().getData(deepCopy(ele) || {}));
-    });
+      portfolioData.record.data.map((ele) => {
+        return newArray.push(new AccordionModel().getData(deepCopy(ele) || {}));
+      });
 
-    setDataFields(newArray);
-  }, []);
+      setDataFields(newArray);
+    }
+  }, [portfolioData]);
 
   return (
-    dataFields && (
+    dataFields &&
+    portfolioData && (
       <div className='portfolio'>
         <div className='portfolio_header'>
           <img src={portrait} className='image' alt='portrait' />

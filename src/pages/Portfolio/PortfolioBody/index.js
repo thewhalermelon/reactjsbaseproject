@@ -2,8 +2,6 @@ import React, { Fragment } from 'react';
 import { onGenerateIcon } from '../../../utils/utilities';
 
 const PortfolioBody = ({ data }) => {
-  console.log('hoang123: ', data);
-
   return (
     <div className='portfolio_body'>
       <div className='main-column'>
