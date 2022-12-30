@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter  as Router, Route, Routes } from 'react-router-dom';
 import Button from './components/Button';
 import Header from './components/Header';
 import InitialPage from './pages/InitialPage';
@@ -13,7 +13,7 @@ function App() {
   return (
     <Router>
       <Header />
-      <div className={'custom-container' + `${theme.darkmode ? ' darkmode' : ' lightmode'}`}>
+      <div className={`custom-container ${theme.darkmode ? ' darkmode' : ' lightmode'}`}>
         <div className='navigation-buttons'>
           <Button value='-1' className='primary-btn' isNavigateButton={true}>
             Back
