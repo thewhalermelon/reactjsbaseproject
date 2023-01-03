@@ -5,6 +5,8 @@ export default class BodyItemModel {
     this['subtitle'] = '';
 
     this['content'] = [];
+
+    this['projects'] = [];
   }
 
   getData(dataSource) {
@@ -18,6 +20,10 @@ export default class BodyItemModel {
 
     if (dataSource && Object.prototype.hasOwnProperty.call(dataSource, 'content')) {
       this.content = dataSource.content ?? this.content;
+    }
+
+    if (dataSource && Object.prototype.hasOwnProperty.call(dataSource, 'projects')) {
+      this.projects = dataSource.projects ?? this.projects;
     }
 
     return this;

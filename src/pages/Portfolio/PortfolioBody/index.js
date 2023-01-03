@@ -28,6 +28,14 @@ const PortfolioBody = ({ data }) => {
                                   return <li key={contentIndex}>{contentItem}</li>;
                                 })}
                               </ul>
+                              <span>
+                                Projects
+                                <ul>
+                                  {bodyItem.projects.map((prjItem, prjIndex) => {
+                                    return <li key={prjIndex}>{prjItem}</li>;
+                                  })}
+                                </ul>
+                              </span>
                             </li>
                           ) : (
                             <ul>
