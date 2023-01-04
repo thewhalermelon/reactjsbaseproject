@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { onGenerateIcon } from '../../../utils/utilities';
+import { onGenerateIcon, validURL } from '../../../utils/utilities';
 
 const PortfolioBody = ({ data }) => {
   return (
@@ -28,14 +28,28 @@ const PortfolioBody = ({ data }) => {
                                   return <li key={contentIndex}>{contentItem}</li>;
                                 })}
                               </ul>
-                              <span>
-                                Projects
-                                <ul>
-                                  {bodyItem.projects.map((prjItem, prjIndex) => {
-                                    return <li key={prjIndex}>{prjItem}</li>;
-                                  })}
-                                </ul>
-                              </span>
+                              {bodyItem.projects ? (
+                                <span>
+                                  Projects
+                                  <ul>
+                                    {bodyItem.projects.map((prjItem, prjIndex) => {
+                                      return (
+                                        <li key={prjIndex}>
+                                          {validURL(prjItem) ? (
+                                            <a href={prjItem} target='_blank' rel='noreferrer'>
+                                              {prjItem}
+                                            </a>
+                                          ) : (
+                                            `${prjItem}`
+                                          )}
+                                        </li>
+                                      );
+                                    })}
+                                  </ul>
+                                </span>
+                              ) : (
+                                <></>
+                              )}
                             </li>
                           ) : (
                             <ul>

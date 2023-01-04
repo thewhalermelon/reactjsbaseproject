@@ -13,7 +13,7 @@
     border: none;
     padding: 0;
 
-    @include flex-box(center, start);
+    @include flex-box(center, flex-start);
 
     .image {
       border-radius: 8px;
@@ -67,9 +67,22 @@
         ol {
           padding-left: 30px;
 
-          li p {
-            font-weight: 600;
-            margin-bottom: 0;
+          li {
+            p {
+              font-weight: 600;
+              margin-bottom: 0;
+            }
+
+            a {
+              color: var(--text-color);
+              text-decoration: none;
+              
+              @include transition();
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
           }
         }
       }
@@ -120,7 +133,7 @@
     &_body {
       display: flex;
 
-      @include flex-box(start, start);
+      @include flex-box(flex-start, flex-start);
     }
   }
 }

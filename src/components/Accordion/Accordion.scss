@@ -75,6 +75,12 @@
                 font-weight: 600;
                 margin-bottom: 0;
               }
+
+              a {
+                color: var(--text-color);
+                text-decoration: underline;
+                word-break: break-all;
+              }
             }
           }
 

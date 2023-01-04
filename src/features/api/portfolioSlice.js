@@ -7,7 +7,7 @@ export const portfolioSlice = createApi({
   }),
   endpoints: (builder) => ({
     getPortfolio: builder.query({
-      query: () => 'v3/b/63b3b65e15ab31599e2ae945'
+      query: () => 'v3/b/63b554c515ab31599e2c8622'
     })
   })
 });

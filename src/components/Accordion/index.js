@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Accordion } from 'react-bootstrap';
 import * as Icon from 'react-feather';
-import { onGenerateIcon } from '../../utils/utilities';
+import { onGenerateIcon, validURL } from '../../utils/utilities';
 import './Accordion.scss';
 
 const AccordionComponent = ({ data }) => {
@@ -31,6 +31,28 @@ const AccordionComponent = ({ data }) => {
                               return <li key={contentIndex}>{contentItem}</li>;
                             })}
                           </ul>
+                          {bodyItem.projects ? (
+                            <span>
+                              Projects
+                              <ul>
+                                {bodyItem.projects.map((prjItem, prjIndex) => {
+                                  return (
+                                    <li key={prjIndex}>
+                                      {validURL(prjItem) ? (
+                                        <a href={prjItem} target='_blank' rel='noreferrer'>
+                                          {prjItem}
+                                        </a>
+                                      ) : (
+                                        `${prjItem}`
+                                      )}
+                                    </li>
+                                  );
+                                })}
+                              </ul>
+                            </span>
+                          ) : (
+                            <></>
+                          )}
                         </li>
                       ) : (
                         <ul>
