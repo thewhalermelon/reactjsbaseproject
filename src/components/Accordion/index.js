@@ -31,7 +31,7 @@ const AccordionComponent = ({ data }) => {
                               return <li key={contentIndex}>{contentItem}</li>;
                             })}
                           </ul>
-                          {bodyItem.projects ? (
+                          {bodyItem.projects.length ? (
                             <span>
                               Projects
                               <ul>
